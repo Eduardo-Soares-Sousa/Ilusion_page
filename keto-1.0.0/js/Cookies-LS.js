@@ -18,14 +18,27 @@ function salvarCookies() {
     var email = document.getElementsByName("Email")[0].value;
     var telefone = document.getElementsByName("Telefone")[0].value;
     var instituicao = document.getElementsByName("Instituicao")[0].value;
-    var mensagem = document.getElementsByName("Mensagem")[0].value;
 
     setCookie("Nome", nome);
     setCookie("Email", email);
     setCookie("Telefone", telefone);
     setCookie("Instituicao", instituicao);
 
-    localStorage.setItem("Mensagem", mensagem);
+
+    var mensagem = document.getElementById('mensagem').value;
+    if(typeof(Storage) !== "undefined"){
+        localStorage.setItem('informacao', mensagem);
+        mostrarMensagem();
+    }else{
+        alert('Seu navegador não suporta localStorage. Por favor, use um navegador mais recente.');
+    }
 
     alert("Cookies e Local Storage atualizados!");
 }
+
+function mostrarMensagem() {
+    var dadosArmazenados = localStorage.getItem('informacao');
+    alert("Mensagem salva");
+}
+
+mostrarDados();
