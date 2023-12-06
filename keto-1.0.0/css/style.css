@@ -592,10 +592,11 @@ button {
      padding-bottom: 60px;
 }
 
+/*
 .gallery::before{
      position: absolute;
      content: "";
-     background-color: #fff236; /*traço superior*/
+     background-color: #fff236; traço superior
      width: 600px;
      height: 4px;
      margin-top: 18%;
@@ -605,12 +606,13 @@ button {
 .gallery::after{
      position: absolute;
      content: "";
-     background-color: #fff236; /*traço inferior*/
+     background-color: #fff236; traço inferior
      width: 600px;
      height: 4px;
      margin-top: -15%;
      margin-left: 1010px;
 }
+*/
 
 .gallery .titlepage {
      text-align: center;
@@ -726,6 +728,7 @@ button {
      padding: 60px;
      margin-top: 5px;
      height: 75%;
+     width: 100%;
 }
 
 .descricaoContato{
